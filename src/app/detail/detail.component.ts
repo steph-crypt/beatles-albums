@@ -16,11 +16,10 @@ import {getAlbumById} from "../utils/getAlbumById"
 export class DetailComponent {
   route: ActivatedRoute = inject(ActivatedRoute);
   album: Album | undefined;
-  @Input() albums: Album[] = [];
   @Input() items: Album[] = [];
+
   constructor() {
     const albumId = Number(this.route.snapshot.params['id']);
-    console.log("id", albumId);
     this.album = getAlbumById(albumId, this.items);
   }
 }

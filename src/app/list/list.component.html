@@ -3,20 +3,18 @@
     <button (click)="sortAlbumsDesc()">Sort Albums A-Z</button>
     <button (click)="sortAlbumsAsc()">Sort Albums Z-A</button>
   </div>
-  <div [ngClass]="'container'">
-    <div [ngClass]="'album-container'">
-      <div [ngClass]="'album'" *ngFor="let item of items">
-        <a [routerLink]="['/details', item.collectionId]">
-          <div [ngClass]="'card'">
-            <div [ngClass]="'text'">
-              <h2 [ngClass]="'albumTitle'">{{item.collectionName}}</h2>
-              <h3 [ngClass]="'artist'">{{item.artistName}}</h3>
-            </div>
-            <img [ngClass]="'albumArtWork'" ngSrc="{{item.artworkUrl100}}" width="250" height="250"
-                 alt="Types Cover">
+  <div [ngClass]="'album-container'">
+    <div [ngClass]="'album'" *ngFor="let item of items">
+      <a [routerLink]="['/details', item.collectionId]">
+        <div [ngClass]="'card'">
+          <div [ngClass]="'text'">
+            <h2 [ngClass]="'albumTitle'">{{item.collectionName}}</h2>
+            <h3 [ngClass]="'artist'">{{item.artistName}}</h3>
           </div>
-        </a>
-      </div>
+          <img [ngClass]="'albumArtWork'" ngSrc="{{item.artworkUrl100}}" width="250" height="250"
+               alt="Types Cover">
+        </div>
+      </a>
     </div>
   </div>
   <div [ngClass]="'loading'" *ngIf="isLoading" class="flex justify-center">

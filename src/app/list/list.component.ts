@@ -23,8 +23,7 @@ export class ListComponent implements OnInit {
 
   @Input() albums: Album[] = [];
   @Input() products: any;
-
-
+  @Input() item!: Album;
 
   constructor() {
   }
@@ -37,7 +36,6 @@ export class ListComponent implements OnInit {
   onWindowScroll(event: any) {
 
     if (window.innerHeight + window.scrollY >= document.body.offsetHeight && !this.isLoading) {
-      console.log(event);
       this.loadItems()
     }
   }
@@ -51,7 +49,6 @@ export class ListComponent implements OnInit {
         this.descAlbums = this.albums.sort((a, b) => a.collectionName.localeCompare(b.collectionName));
         this.items.push(...this.albums);
         this.isLoading = false
-        console.log('items', this.items);
         return this.items
       },
       error: (error: string) => {

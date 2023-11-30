@@ -25,8 +25,7 @@ a {
   background: $black;
   border-radius: 7px;
   height: 375px;
-  box-shadow: 1px 1px 5px black;
-  border: 2px solid white;
+  box-shadow: 1px 1px 5px $black;
 
   @media only screen and (min-width: $break-md) {
     flex-direction: column;

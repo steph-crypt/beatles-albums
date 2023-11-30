@@ -1,15 +1,20 @@
 import { Component } from '@angular/core';
 import {ListComponent} from "../list/list.component";
+import {RouterLink, RouterModule, RouterOutlet} from "@angular/router";
 
 @Component({
   selector: 'app-home',
   standalone: true,
   imports: [
-    ListComponent
+    ListComponent,
+    RouterOutlet,
+    RouterModule,
+    RouterLink,
   ],
-  templateUrl: './home.component.html',
+  template: `<app-list/>`,
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
+
 
 }
