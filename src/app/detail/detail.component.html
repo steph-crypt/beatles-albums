@@ -1,1 +1,14 @@
-<p>detail works!</p>
+<section [ngClass]="'detail-section'">
+  <p>details works! </p>
+  <div [ngClass]="'album'" *ngFor="let album of albums">
+    <div [ngClass]="'card'">
+      <div [ngClass]="'text'">
+        <h2 [ngClass]="'artist'">Artist: {{album?.artistName}}</h2>
+        <h3 [ngClass]="'albumTitle'">Album: {{album?.collectionName}}</h3>
+        <span><a href="{{album?.collectionViewUrl}}">Album Page</a></span>
+      </div>
+      <img [ngClass]="'albumArtWork'" ngSrc="{{album?.artworkUrl100}}" width="250" height="250" alt="Types Cover">
+      <a class="button" routerLink="/">Back to Albums</a>
+    </div>
+  </div>
+</section>

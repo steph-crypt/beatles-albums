@@ -1,0 +1,13 @@
+@import "../app/global.scss";
+
+header {
+  position: sticky;
+  top: 0;
+  background: $white;
+  margin: -1rem -1rem 1rem -1rem;
+  padding: 1.5rem;
+  box-shadow: 1px 2px 5px #303030;
+  font-family: $beatlesFont;
+  font-size: 1.5rem;
+  color: $black;
+}
