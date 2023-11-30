@@ -3,7 +3,36 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.1.
 -Uses Chrome Browser
 
-Frontend case-study
+App Description
+======================
+Welcome to this little Beatles app.
+This app serves a list of all Beatles albums from the Itunes API.
+The list is sortable in descending and ascending alphabetical order, and offers
+an infinite scrolling effect in which the list loads every time the user reaches the end of it.
+
+### **Bugs In The App**
+Because I have never used Angular, there were some corner cases I encountered that I was unsure 
+of how to resolve in the given amount of time for the challenge.
+
+#### Routing
+The primary issue that was not resolved it that the app does not properly route to the details page of each
+album. I believe this is due to the nature of the nested routing, but I require deeper insight on the 
+fundamentals of Angular routing.
+
+#### Lazy Loading
+I would have liked to apply lazy loading to the list, however there are miriad ways to approach
+lazy loading in Angular/some of these ways are incompatible with different versions of angular.
+With more time I would have applied a lazy loading effect to defer the number of albums loaded at one time. 
+
+### Sorting Duplicates
+Because of the infinite scrolling/loading of albums from the API, after more albums have been loaded
+the sorting effect will show doubles.
+This is something I would have liked to have fixed with a bit more time.
+
+
+
+
+Frontend case-study Instructions
 ======================
 
 Preface
