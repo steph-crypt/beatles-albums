@@ -1,0 +1,17 @@
+//Mixins
+@mixin flexColumnCenter() {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+//Variables
+//*fonts
+$beatlesFont: "Bebas Neue", serif;
+
+//*breakpoints
+$break-md: 768px;
+
+//*colors
+$white: #fff;
+$black: #000
