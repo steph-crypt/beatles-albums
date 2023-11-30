@@ -6,7 +6,7 @@
   <div [ngClass]="'container'">
     <div [ngClass]="'album-container'">
       <div [ngClass]="'album'" *ngFor="let item of items">
-        <a [routerLink]="['/details', item.id]">
+        <a [routerLink]="['/details', item.collectionId]">
           <div [ngClass]="'card'">
             <div [ngClass]="'text'">
               <h2 [ngClass]="'albumTitle'">{{item.collectionName}}</h2>

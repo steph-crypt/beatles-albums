@@ -1,4 +1,4 @@
-import {Component, HostListener, inject, Input, OnInit} from '@angular/core';
+import {Component, HostListener, inject, Input, OnInit, ViewChild} from '@angular/core';
 import {CommonModule, NgOptimizedImage} from '@angular/common';
 import {RouterLink, RouterModule, RouterOutlet} from "@angular/router";
 import {DataService} from "../service/data.service";
@@ -20,8 +20,11 @@ export class ListComponent implements OnInit {
   isLoading: boolean = false;
   ascAlbums: Album[] = [];
   descAlbums: Album[] = [];
+
   @Input() albums: Album[] = [];
   @Input() products: any;
+
+
 
   constructor() {
   }
@@ -57,11 +60,6 @@ export class ListComponent implements OnInit {
     });
   }
 
-  public getAlbumById(id: number): Album | undefined {
-    console.log("just items", this.items);
-    console.log("find", this.items.find((album) => album.id === id));
-    return this.items.find((album) => album.id === id);
-  }
   public sortAlbumsDesc(): void {
     this.descAlbums = this.items.sort((a: Album, b: Album) => a.collectionName.localeCompare(b.collectionName));
   }
