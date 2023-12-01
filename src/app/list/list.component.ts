@@ -22,7 +22,6 @@ export class ListComponent implements OnInit {
   descAlbums: Album[] = [];
 
   @Input() albums: Album[] = [];
-  @Input() products: any;
   @Input() item!: Album;
 
   constructor() {
@@ -33,9 +32,10 @@ export class ListComponent implements OnInit {
   }
 
   @HostListener('window:scroll', ['$event'])
-  onWindowScroll(event: any) {
+  onWindowScroll(event: EventTarget) {
 
     if (window.innerHeight + window.scrollY >= document.body.offsetHeight && !this.isLoading) {
+      console.log(event);
       this.loadItems()
     }
   }
